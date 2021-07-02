@@ -5,7 +5,7 @@ class Combinator {
     fun fillMapFact(factMap: MutableMap<Long, Long>, n: Long) {
         var result = 1L
 
-        for (k in 1..n)
+        for (k in 0L..1L)
             factMap[k] = result
 
         for (k in 2..n) {
