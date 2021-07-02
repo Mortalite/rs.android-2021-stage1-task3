@@ -2,7 +2,7 @@ package subtask2
 
 class SquareDecomposer {
 
-    fun sqrtLower(number: Long): Long {
+    fun sqrt(number: Long): Long {
         var k: Long = 0
 
         while (k * k < number)
@@ -32,7 +32,7 @@ class SquareDecomposer {
             else if (sqrK <= sqrNumber && !solution.contains(k.toInt())) {
                 solution.add(k.toInt())
                 sqrNumber -= sqrK
-                k = sqrtLower(sqrNumber)
+                k = sqrt(sqrNumber)
             }
             else
                 k--

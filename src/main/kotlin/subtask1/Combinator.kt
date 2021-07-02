@@ -16,11 +16,9 @@ class Combinator {
 
     fun findMinCoeff(factMap: MutableMap<Long, Long>, posters:Long, n: Long): Int? {
         for (k in 0..n) {
-            if (factMap.containsKey(n) && factMap.containsKey(k) && factMap.containsKey(n - k)) {
-                val combination = factMap[n]!! / (factMap[k]!! * factMap[n-k]!!)
-                if (combination == posters)
-                    return k.toInt()
-            }
+            val combination = factMap[n]!! / (factMap[k]!! * factMap[n-k]!!)
+            if (combination == posters)
+                return k.toInt()
         }
         return null
     }
